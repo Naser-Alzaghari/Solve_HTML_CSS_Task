@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #0F0F0F;
+            margin-left: 0;
+            margin-left: 0;
+        }
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:white;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 10px;
+            gap: 10px;
+        }
+        .container2{
+            display: flex;
+            padding: 0px 10px;
+            gap: 10px;
+        }
+        nav {
+            margin-bottom: 10px;
+        }
+        .user_circle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: grey;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            color: white;
+            flex-shrink: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            margin: 0px 10px; 
+        }
+        .search_bar {
+            border: 2px solid #222222;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 10px;
+            min-width: 200px;
+            width: 400px;
+        }
+        nav .container button {
+            border: none;
+            background-color: transparent;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+        }
+        nav .container button:hover{
+            cursor: pointer;
+            background-color: #3d3d3d !important;
+        }
+        .gab {
+            flex-grow: 1;
+        }
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .sidebar p {
+            font-size: 10px;
+            margin: 0;
+            margin-top: 4px;
+        }
+
+        .sidebar button , .main_section_nav button {
+            border: none;
+            background-color: transparent;
+            border-radius: 20px;
+            border-radius: 10px;
+            padding: 8px;
+            flex-shrink: 0;
+        }
+        .main_section_nav button {
+            background-color: #3d3d3d;
+            margin: 0px 8px;
+        }
+        .main_section_nav button:hover{
+            cursor: pointer;
+            background-color: #555555 !important;
+        }
+        .sidebar button:hover{
+            cursor: pointer;
+            background-color: #3d3d3d !important;
+        }
+        .main_section {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+        }
+        .main_section_nav {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-bottom: 10px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .video {
+            cursor: pointer;
+            width: 280px;
+            max-width: 400px;
+            height: 220px;
+            background-color: #3d3d3d;
+            border-radius: 10px;
+            flex-grow: 1;
+        }
+        .video_image_container{
+            position: relative;
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            background-image: url(https://camo.githubusercontent.com/21bb8ae3629c4852404841252c65baa38426e4c0d01a68a0f7e6fd121d4649dc/68747470733a2f2f7777772e69696d2e66722f65636f6c652d7765622f77702d636f6e74656e742f75706c6f6164732f323031372f30312f48544d4c352e6a7067);
+            background-size: cover;
+            margin-bottom: 10px;
+        }
+        .video_time {
+            position: absolute;
+            background-color: black;
+            opacity: 0.5;
+            bottom: 8px;
+            right: 8px;
+            font-size: 12px;
+            padding: 2px;
+            border-radius: 5px;
+        }
+        .video_data {
+            display: flex;
+            margin: 5px;
+            gap: 10px;
+        }
+        .video_data * {
+            margin: 0px;
+        }
+        .video_data h5 {
+            margin-bottom: 5px;
+        }
+        .video_data p {
+            font-size: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <button><i class="fa-solid fa-bars"></i></button>
+                <a href="http://127.0.0.1:5500/hw5.12/hw5.12.html"><img width="100" src="logo.PNG" alt=""></a>
+                <div class="gab"></div>
+                <input type="text" class="search_bar" placeholder="Search">
+                <button class="user_circle" style="background-color: #222222;">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <div class="gab"></div>
+                <button><i class="fa-solid fa-video"></i></button>
+                <button><i class="fa-solid fa-bell"></i></button>
+                <div class="user_circle">
+                    n
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container2">
+        <div class="sidebar">
+            <button>
+                <div><i class="fa-solid fa-house"></i></div>
+                <p>Home</p>
+            </button>
+            <button>
+                <div><i class="fa-brands fa-youtube"></i></div>
+                <p>shorts</p>
+            </button>
+            <button>
+                <div><i class="fa-brands fa-youtube"></i></div>
+                <p>subcriptions</p>
+            </button>
+            <button>
+                <div><i class="fa-brands fa-youtube"></i></div>
+                <p>you</p>
+            </button>
+            
+        </div>
+        <div class="main_section">
+            <div class="main_section_nav">
+                    <button>All</button>
+                    <button>JavaScript</button>
+                    <button>Music</button>
+                    <button>Gaming</button>
+                    <button>AI</button>
+                    <button>Algorithms</button>
+                    <button>Apple</button>
+                    <button>Live</button>
+                    <button>Frontend</button>
+                    <button>Backend</button>
+            </div>
+            <div class="content">
+                <div class="video">
+                    <div class="video_image_container">
+                        <div class="video_time">
+                            1:00
+                        </div>
+                    </div>
+                    <div class="video_data">
+                        <div class="user_circle">
+                            <img src="https://alamaal.net/pluginfile.php/102/course/overviewfiles/unnamed.png" width="100%" style="border-radius: 50%;" alt="">
+                        </div>
+                        <div>
+                            <h5>Learn HTML and CSS</h5>
+                            <p>100k views . 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video_image_container">
+                        <div class="video_time">
+                            1:00
+                        </div>
+                    </div>
+                    <div class="video_data">
+                        <div class="user_circle">
+                            <img src="https://alamaal.net/pluginfile.php/102/course/overviewfiles/unnamed.png" width="100%" style="border-radius: 50%;" alt="">
+                        </div>
+                        <div>
+                            <h5>Learn HTML and CSS</h5>
+                            <p>100k views . 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video_image_container">
+                        <div class="video_time">
+                            1:00
+                        </div>
+                    </div>
+                    <div class="video_data">
+                        <div class="user_circle">
+                            <img src="https://alamaal.net/pluginfile.php/102/course/overviewfiles/unnamed.png" width="100%" style="border-radius: 50%;" alt="">
+                        </div>
+                        <div>
+                            <h5>Learn HTML and CSS</h5>
+                            <p>100k views . 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video_image_container">
+                        <div class="video_time">
+                            1:00
+                        </div>
+                    </div>
+                    <div class="video_data">
+                        <div class="user_circle">
+                            <img src="https://alamaal.net/pluginfile.php/102/course/overviewfiles/unnamed.png" width="100%" style="border-radius: 50%;" alt="">
+                        </div>
+                        <div>
+                            <h5>Learn HTML and CSS</h5>
+                            <p>100k views . 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video_image_container">
+                        <div class="video_time">
+                            1:00
+                        </div>
+                    </div>
+                    <div class="video_data">
+                        <div class="user_circle">
+                            <img src="https://alamaal.net/pluginfile.php/102/course/overviewfiles/unnamed.png" width="100%" style="border-radius: 50%;" alt="">
+                        </div>
+                        <div>
+                            <h5>Learn HTML and CSS</h5>
+                            <p>100k views . 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video_image_container">
+                        <div class="video_time">
+                            1:00
+                        </div>
+                    </div>
+                    <div class="video_data">
+                        <div class="user_circle">
+                            <img src="https://alamaal.net/pluginfile.php/102/course/overviewfiles/unnamed.png" width="100%" style="border-radius: 50%;" alt="">
+                        </div>
+                        <div>
+                            <h5>Learn HTML and CSS</h5>
+                            <p>100k views . 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video">
+                    <div class="video_image_container">
+                        <div class="video_time">
+                            1:00
+                        </div>
+                    </div>
+                    <div class="video_data">
+                        <div class="user_circle">
+                            <img src="https://alamaal.net/pluginfile.php/102/course/overviewfiles/unnamed.png" width="100%" style="border-radius: 50%;" alt="">
+                        </div>
+                        <div>
+                            <h5>Learn HTML and CSS</h5>
+                            <p>100k views . 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://kit.fontawesome.com/29bcb0d26a.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .container div {
+            background-color: rgb(213, 212, 212);
+            height: 100px;
+            margin: 3px;
+            padding: 5px;
+        }
+        .container div div {
+            background-color: grey;
+            height: auto;
+        }
+
+        .div2, .div3, .div6, .div7, .div9, .div12 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .div6 {
+            grid-template-columns: 1fr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">item 1</div>
+        <div class="div2">
+            <div>sub 1</div>
+            <div>sub 2</div>
+            <div>sub 3</div>
+            <div>sub 4</div>
+        </div>
+        <div class="div3">
+            <div>sub 1</div>
+            <div>sub 2</div>
+            <div>sub 3</div>
+            <div>sub 4</div>
+        </div>
+        <div class="div4">item 4</div>
+        <div class="div5">item 5</div>
+        <div class="div6">
+            <div>sub 1</div>
+            <div>sub 2</div>
+        </div>
+        <div class="div7">
+            <div>sub 1</div>
+            <div>sub 2</div>
+        </div>
+        <div class="div8">item 8</div>
+        <div class="div9">
+            <div>sub 1</div>
+            <div>sub 2</div>
+            <div>sub 3</div>
+            <div>sub 4</div>
+        </div>
+        <div class="div10">item 10</div>
+        <div class="div11">item 11</div>
+        <div class="div12">
+            <div>sub 1</div>
+            <div>sub 2</div>
+            <div>sub 3</div>
+            <div>sub 4</div>
+        </div>
+    </div>
+</body>
+</html>
