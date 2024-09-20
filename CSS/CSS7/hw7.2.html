@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 200px;
+        height: 150px;
+        background-color: #c5c5c5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        
+    }
+    
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #ccff55;
+        border-radius: 5px;
+        transform: rotate(30deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.5s ease-in-out, content 0.5s ease-in-out;
+    }
+    
+    .box:hover {
+        transform: rotate(-60deg) scale(1.15);
+    }
+
+    .box::before {
+    content: "Box 1";
+    }
+
+    .box:hover::before {
+    content: "Box 2";
+    }
+</style>
+    <body>
+        <div class="container">
+            <div class="box"></div>
+        </div>
+</body>
+</html>

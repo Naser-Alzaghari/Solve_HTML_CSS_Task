@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bg {
+        background-image: url("https://plus.unsplash.com/premium_photo-1673306778968-5aab577a7365?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww");
+        margin: auto;
+        margin-top: 200px;
+        border: 1px solid black;
+        width: 200px;
+        height: 100px;
+        background-color: coral;
+        color: white;
+        animation: mymove 5s infinite;
+      }
+
+      @keyframes mymove {
+        50% {
+          transform: rotate(50deg);
+          transform-origin: right;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="bg"></div>
+    </main>
+  </body>
+</html>

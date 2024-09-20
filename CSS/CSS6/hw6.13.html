@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resturant Menu</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f0f0f0;
+      }
+      h2{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .bigger-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+      }
+
+      .container {
+        width: 70%;
+        min-width: 600px;
+        height: auto;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+          "header"
+          "content"
+          "content2"
+          "footer";
+      }
+
+      .header {
+        grid-area: header;
+        padding: 5px;
+        border-bottom: 2px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+      }
+
+      .header::after,
+      .content::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px dashed rgb(103, 101, 101);
+      }
+
+      .header .left {
+        display: flex;
+      }
+
+      .header .left img {
+        height: 30px;
+        margin-top: 3px;
+      }
+
+      .header .left .title {
+        font-family: "Pacifico", cursive;
+      }
+
+      .header .left .sub-title {
+        display: block;
+        font-size: 0.6em;
+        color: rgb(159, 157, 157);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header .right {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        padding: 7px;
+      }
+
+      .content {
+        grid-area: content;
+        padding: 5vh 0;
+        position: relative;
+      }
+
+      .content p {
+        margin-bottom: 10px;
+      }
+
+      .content img {
+        display: block;
+        width: 100%;
+      }
+
+      .content h2 {
+        text-shadow: 1px 1px black;
+      }
+
+      .content p {
+        color: rgb(159, 157, 157);
+      }
+
+      /* Ingredients styling */
+      .ingredients-container {
+        margin-top: 20px;
+      }
+
+      .ingredients-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+      }
+
+      .ingredient-box {
+        width: 20px;
+        height: 20px;
+        background-color: #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+
+      .ingredients-list span {
+        align-self: center;
+      }
+
+      .ingredients-container {
+        background-color: #fef3e5;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .ingredients-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .ingredients-list li {
+        padding: 3px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Boxes next to the text */
+      .ingredient-box {
+        width: 20px;
+        height: 20px;
+        background-color: #dcdcdc;
+        margin-right: 10px;
+        border-radius: 4px;
+      }
+
+      .content2 {
+        grid-area: content2;
+        padding: 5vh 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .content2 .fLeft {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content2 .fLeft img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50px;
+        margin-bottom: 5px;
+      }
+
+      .content2 .fRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content2 .fRight button {
+        padding: 10px 20px;
+        border: 2px solid black;
+        color: aliceblue;
+        background-color: rgb(165, 10, 10);
+      }
+
+      .footer {
+        grid-area: footer;
+        padding: 5vh 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(159, 157, 157);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bigger-container">
+      <div class="container">
+        <div class="header">
+          <div class="left">
+            <img
+              src="https://img.freepik.com/premium-vector/restaurant-logo-design-vector-illustration-food-symbol-vector_1236506-726.jpg"
+              alt="resturant logo"
+            />
+            <span class="title"
+              >Delicious
+              <span class="sub-title">The best food blog in the web</span></span
+            >
+          </div>
+
+          <div class="right">
+            <box-icon type="logo" name="facebook-square"></box-icon>
+            <box-icon type="logo" name="twitter"></box-icon>
+            <box-icon type="logo" name="google-plus"></box-icon>
+            <box-icon type="logo" name="instagram-alt"></box-icon>
+            <box-icon name="pinterest-alt" type="logo"></box-icon>
+            <box-icon name="envelope"></box-icon>
+          </div>
+        </div>
+
+        <div class="content">
+          <h2>Chocolate Pizza</h2>
+          <br />
+          <p>Posted on 1/7/2021/Dessart</p>
+
+          <img
+            src="https://hips.hearstapps.com/hmg-prod/images/chocolate-pizza-secondary-658367a175ec1.jpg"
+            height="600px"
+            alt="chocolate pizza"
+          />
+          <br />
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            praesentium vel, tenetur voluptas perferendis adipisci eaque qui
+            odit eos fugiat asperiores eligendi error ratione iure velit libero
+            recusandae iste amet. Debitis, distinctio totam natus recusandae
+            praesentium delectus sit inventore quo, dolores illo eveniet
+            explicabo mollitia repellat maiores sed aut omnis perspiciatis autem
+            error nobis accusamus doloribus eaque odit! Saepe, blanditiis.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            praesentium vel, tenetur voluptas perferendis adipisci eaque qui
+            odit eos fugiat asperiores eligendi error ratione iure velit libero
+            recusandae iste amet. Debitis, distinctio totam natus recusandae
+            praesentium delectus sit inventore quo, dolores illo eveniet
+            explicabo mollitia repellat maiores sed aut omnis perspiciatis autem
+            error nobis accusamus doloribus eaque odit! Saepe, blanditiis.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            praesentium vel, tenetur voluptas perferendis adipisci eaque qui
+            odit eos fugiat asperiores eligendi error ratione iure velit libero
+            recusandae iste amet. Debitis, distinctio totam natus recusandae
+            praesentium delectus sit inventore quo, dolores illo eveniet
+            explicabo mollitia repellat maiores sed aut omnis perspiciatis autem
+            error nobis accusamus doloribus eaque odit! Saepe, blanditiis.
+          </p>
+
+          <div class="ingredients-container">
+            <ul class="ingredients-list">
+              <li>
+                <div class="ingredient-box"></div>
+                <span>1 ½ cups milk</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>½ cup mascarpone</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>½ tsp pink salt</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>1 lb black mission figs</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>1 lemon, juiced</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>½ cup brown sugar</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>2 tbsp butter</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>2-4 tbsp water</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>1 ½ cups heavy cream</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>⅓ cup granulated sugar</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>3 egg yolks</span>
+              </li>
+              <li>
+                <div class="ingredient-box"></div>
+                <span>1 cup honey roasted pecans, roughly chopped</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content2">
+          <div class="fLeft">
+            <img
+              src="https://cdn.openart.ai/published/SnYHfyvx3FVlG6377kv3/UcSem4Q9_CiS9_1024.webp"
+              alt="girl"
+            />
+
+            <h3>Venessa Stevenson</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              dolores quaerat, necessitatibus totam dolore suscipit maiores!
+              Neque quae ipsa fuga voluptatibus ducimus ipsum aspernatur, vero
+              qui libero, numquam ut provident.
+            </p>
+          </div>
+
+          <div class="fRight">
+            <button type="button">SHARE RECIPE</button>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>
+            Delicious 2013.All &copy; Rights Reserved. <br />
+            proudly published with ghost
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon Link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

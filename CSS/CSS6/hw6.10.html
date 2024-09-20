@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <head>
+            <style>
+                * {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    margin: 0;
+                }
+                .container {
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                grid-template-columns: 1fr;
+                width: 400px;
+                margin: 10px auto;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+                }
+                
+
+                .header {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                padding: 0;
+                margin: 0;
+                }
+
+                .profile-pic {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: red;
+                margin-right: 10px;
+                }
+
+                .name * {
+                padding: 0;
+                margin: 0;
+                }
+
+                .content {
+                padding: 5px;
+                border-radius: 5px;
+                }
+
+                .actions {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px;
+                font-size: 13px;
+                }
+
+                .likes {
+                display: flex;
+                }
+
+                .like-icon {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: red;
+                margin-right: 5px;
+                }
+                .red_box{
+                    width: 100%;
+                    height: 200px;
+                    background-color: red;
+                }
+            </style>
+        </head>
+        <body>
+
+            <div class="container">
+                <div class="header">
+                    <div class="profile-pic"></div>
+                    <div class="name">
+                        <h4>Arnold Schwarzenegger</h4>
+                        <p><u>Editar</u></p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed rhoncus nibh sapien, quis semper nunc mollis quis.
+                        Ut blandit, massa vel iaculis bibendum, elit tortor
+                        suscipit ante, in venenatis nisl dolor ac massa.</p>
+                    <div class="red_box">
+
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="actions">
+                    <div class="action-button">Like</div>
+                    <div class="action-button">Tweet</div>
+                    <div class="action-button">Comment</div>
+                    <div class="likes">
+                        <div class="like-icon"></div>
+                        <div class="like-icon"></div>
+                        <div class="like-icon"></div>
+                        <div class="like-icon"></div>
+                        <div class="like-icon"></div>
+                        <div class="like-icon"></div>
+                        <div class="like-icon"></div>
+                        <div class="like-icon"></div>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+    </html>

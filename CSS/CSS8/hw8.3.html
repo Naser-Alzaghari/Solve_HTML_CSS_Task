@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            height:1500px ;
+            width: 700px;
+        }
+        .img{
+            height:500px ;
+            /* width: 500px; */
+            background-size: cover;
+            background-image: url("asste/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg");
+            
+        
+        }
+        @media(max-width:(1000px)){
+           .img {
+            flex-direction: column;
+            flex-wrap:wrap;
+            background-image: url(asste/download.jfif);
+           }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique voluptate sint sit expedita quia totam distinctio omnis.</p>
+        <div class="img">gtfhg</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task #12</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .item {
+        position: relative;
+        border-radius: 20px;
+        border: 0.5px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .item div{
+        flex-grow: 1;
+      }
+
+      .item img {
+        width: 100%;
+      }
+
+      button {
+        bottom: 0;
+        background-color: rgb(2, 74, 2);
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .title {
+        font-weight: 800;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item">
+        <div>
+            <img src="computer.jpg" alt="image if a computer" />
+            <p class="title">Computer Starter Kit</p>
+            <p>
+              This is the best computer money can buy, if you don't have much money
+            </p>
+    
+            <ul>
+              <li>Computer</li>
+              <li>Moniter</li>
+              <li>Keyboard</li>
+              <li>Mouse</li>
+            </ul>
+        </div>
+        <button>BUY NOW</button>
+      </div>
+
+      <div class="item">
+        <div>
+            <img src="printer.jpg" alt="a printer" />
+            <p class="title">Printer</p>
+            <p>Only capable of printing ASCII art.</p>
+    
+            <ul>
+              <li>Paper and ink not included</li>
+            </ul>
+        </div>
+        <button>BUY NOW</button>
+      </div>
+
+      <div class="item">
+        <div>
+            <img src="printer.jpg" alt="a printer" />
+            <p class="title">Printer 2</p>
+            <p>A la 1989</p>
+        </div>
+        <button>BUY NOW</button>
+      </div>
+
+      <div class="item">
+        <div>
+            <p class="title">Mouse</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facere
+              quod aut impedit cum quibusdam maiores, quasi repellat doloribus
+              corporis pariatur adipisci tenetur quas soluta ea neque veritatis eum
+              quo accusantium! Fugit consectetur iure provident magnam sit in
+              deleniti architecto!
+            </p>
+        </div>
+
+        <button>BUY NOW</button>
+      </div>
+
+      <div class="item">
+        <div>
+            <img src="computer.jpg" alt="an image of a computer" />
+            <p class="title">Macintosh 8500</p>
+            <p>
+              his is the best computer money can buy, if you don't have much money.
+              This computer was state of art in 1995
+            </p>
+        </div>
+
+        <button>BUY NOW</button>
+      </div>
+    </div>
+  </body>
+</html>

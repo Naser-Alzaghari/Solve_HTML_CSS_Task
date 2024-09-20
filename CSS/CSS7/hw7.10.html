@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .div_1{
+            display: flex;
+             border: 5px solid black;
+             width: 200px;
+             height: 50px;
+        }
+        .div_1 div{
+            animation-name: battry;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+            background-color: green;
+        }
+        .div_2{
+             border: 5px solid black;
+             height: 20px;
+        }
+        @keyframes battry {
+            0%{
+                width: 0%;
+            }
+            10%{
+                background-color: red;
+            }
+            100%{
+                background-color: green;
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div_1">
+            <div></div>
+        </div>
+        <div class="div_2"></div>
+    </div>
+</body>
+</html>
