@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .grid_container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            font-size: large;
+            color: white;
+            font-weight: bold;
+            height: 500px;
+            gap: 20px;
+        }
+        .grid_container *{
+            border-radius: 10px;
+            margin: 5px;
+            padding: 10px;
+            height: 100%;
+            background-size: cover;
+        }
+        .Amman{
+            background-image: url(https://cf.bstatic.com/xdata/images/city/600x600/664053.jpg?k=b8487dac4c18aba3e8e0ca69b64cd3a93e4cd6060769d3191ac740d537d2627c&o=);
+            grid-column: 1/4;
+        }
+        .Aqaba{
+            background-image: url(https://cf.bstatic.com/xdata/images/city/600x600/663986.jpg?k=1db5a0d67b90441da2a9405f912335e48a015389eca787a350ef98a1101fcb49&o=);
+            grid-column: 4/7;
+        }
+        .Istanbul{
+            background-image: url(https://cf.bstatic.com/xdata/images/city/600x600/706616.jpg?k=18249a9c9df405a7dcd2954fdf2e584f7b7d40bf81380aa4b03a28cdbe8ce281&o=);
+            grid-column: 1/3;
+        }
+        .Soqayma{
+            background-image: url(https://cf.bstatic.com/xdata/images/city/600x600/977220.jpg?k=ee4b7b42c35b8cbf09c8ddb7630092b40cd706fec153c41904ed6e252a883938&o=);
+            grid-column: 3/5;
+        }
+        .Dubai{
+            background-image: url(https://cf.bstatic.com/xdata/images/city/600x600/977227.jpg?k=7cf547df1d40f65019ad3bb9cc72a9bfd9763dc86b933cd51b50dfcb41dac8f2&o=);
+            grid-column: 5/7;
+        }
+        .margin_con {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+        h1,h2,h3,h4,h5,h6,p{
+            margin: 3px 0px;
+        }
+        .flex_row {
+            display: flex;
+            flex-direction: row;
+            gap: 20px
+        }
+        .flex_row * {
+            flex-grow: 1;
+        }
+        .flex_auto *{
+            flex-grow: 0;
+        }
+        .grey_text {
+            color: gray;
+        }
+        .while_text {
+            color: white !important;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            width: 80%;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+
+            background-color: #003B95;
+            height: 260px;
+            color: white;
+            width: 100%;
+        }
+        .main_nav {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 50px;
+        }
+        .secound_nav {
+            margin: 4px 0px;
+        }
+        .main_nav h2 {
+            flex-grow: 1;
+        }
+        .Search_box {
+            display: flex;
+            width: 100%;
+            margin: -25px 0;
+            height: 60px;
+            background-color: rgb(255, 221, 0);
+            border-radius: 3px;
+            padding: 5px;
+            margin-bottom: 50px;
+        }
+        .Search_box * {
+            padding: 10px;
+            border: none;;
+            margin: 0px 2px;
+            flex-grow: 1;
+            display: block;
+            border-radius: 3px;
+        }
+        button {
+            border: none;
+            font-size: 20px;
+            text-align: center;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        .button_style1 {
+            border: 1px solid #006CE4;
+            font-size: 15px;
+            color: #006CE4;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .button_style2 {
+            color: white;
+            background-color: transparent;
+        }
+        .button_style3 {
+            border: 1px solid #006CE4;
+            font-size: 15px;
+            color: #006CE4;
+            background-color: white;
+            border-radius: 5px;
+            background-color: #006CE4; color: white; font-size: larger; font-weight: bold;
+            width: fit-content;
+        }
+        .button_style4 {
+            color: gray;
+            background-color: transparent;
+        }
+        .button_style4:hover{
+            background-color: rgb(234, 234, 234);
+        }
+        button:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+        .nav_Welcome{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .button_style2:hover{
+            background-color: #004fc5;
+
+        }
+        .selected_nav {
+            border: 1px solid white;
+            background-color: #004fc5;
+        }
+        .selected{
+            border: 1px solid #006CE4;
+            color: #006CE4;
+            background-color: #9cc1eb;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            row-gap: 10px;
+            background-size: cover;
+            border-radius: 10px;
+        }
+        .planner div img {
+            width: 150px;
+            border-radius: 10px;
+        }
+        .rating{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #003B95;
+            color: white;
+            font-size: 10px;
+            height: 20px;
+            width: 20px;
+            border-radius: 10px;
+            border-bottom-left-radius: 0px;
+        }
+        .card2 {
+            border: 1px solid gray;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            background-size: cover;
+            border-radius: 10px;
+            padding: 10px;
+            height: 300px;
+        }
+        .card2 .image {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: -10px;
+            background-size:cover;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            background-color: #F5F5F5;
+            width: 100%;
+        }
+        footer * {
+            margin: 5px 0px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+        ul li p {
+            margin-bottom: 12px;
+        }
+        ul li a {
+            color: grey;
+            text-decoration: none;
+        }
+        ul li a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+        <div class="margin_con">
+            <nav>
+                    <div class="container">
+                        <div class="main_nav">
+                            <h2>Booking.com</h2>
+                            <button class="button_style2">JOD</button>
+                            <button class="button_style2"><img width="25" src="https://t-cf.bstatic.com/design-assets/assets/v3.125.0/images-flags/Gb@3x.png" alt="" style="border-radius: 50%;"></button>
+                            <button class="button_style2"><i class="fa-solid fa-circle-question"></i></button>
+                            <button class="button_style2">List your property</button>
+                            <button class="button_style1">Register</button>
+                            <button class="button_style1">Sign in</button>
+                        </div>
+                        <div class="secound_nav">
+                            <button class="button_style2 selected_nav">Stays</button>
+                            <button class="button_style2">Flights</button>
+                            <button class="button_style2">Car rentals</button>
+                            <button class="button_style2">Attractions</button>
+                            <button class="button_style2">Airport taxis</button>
+                        </div>
+                        <div class="nav_Welcome">
+                            <h1 style="font-weight: 900;">Find your next stay</h1>
+                            <p>Search low prices on hotels, homes and much more...</p>
+                        </div>
+                    </div>
+            </nav>
+            <div class="container">
+                    <div class="Search_box">
+                        <input type="text" placeholder="Where are you going?">
+                        <input type="date" placeholder="Check-in date - Check-out data">
+                        <select name="" id="">
+                            <option value="">2 adults . 0 children . 1 room</option>
+                        </select>
+                        <button class="button_style3">Search</button>
+                    </div>
+                    <h1>Offers</h1>
+                    <p>promotions, deals, and special offers for you</p>
+                    <br>
+                    <div class="flex_row">
+                        <div class="card while_text" style="background-image: url(https://q-xx.bstatic.com/xdata/images/xphoto/714x300/350960127.jpeg?k=e2732d40882766c8edd0001d7cca566de1d43af2d117b964f2e3ccf579d9a498&o=);">
+                            <h3>Size the moment!</h3>
+                            <p>Save 15% or more when you book and stay before October 1, 2024</p>
+                            <button class="button_style3">find Gateway Deals</button>
+                        </div>
+                        <div class="card while_text" style="background-image: url(https://q-xx.bstatic.com/xdata/images/xphoto/714x300/350960127.jpeg?k=e2732d40882766c8edd0001d7cca566de1d43af2d117b964f2e3ccf579d9a498&o=);">
+                            <h3>Size the moment!</h3>
+                            <p>Save 15% or more when you book and stay before October 1, 2024</p>
+                            <button class="button_style3">find Gateway Deals</button>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h1>Quick and easy trip planner</h1>
+                    <p>Pick a vibe and explore the top destinations in Jordan</p>
+                    <div class="secound_nav grey_text">
+                        <button class="button_style4 selected">Stays</button>
+                        <button class="button_style4">Flights</button>
+                        <button class="button_style4">Car rentals</button>
+                        <button class="button_style4">Attractions</button>
+                        <button class="button_style4">Airport taxis</button>
+                    </div>
+                    <div class="flex_row planner flex_auto">
+                        <div>
+                            <p><img src="https://cf.bstatic.com/xdata/images/xphoto/300x240/140031882.jpg?k=cc6915b3ce7e80b15a873066908fe85b06a415234b37c215f6cf137e6e699260&o=" alt=""></p>
+                            <h4>Jerash</h4>
+                            <p>37 km away</p>
+                        </div>
+                        <div>
+                            <p><img src="https://cf.bstatic.com/xdata/images/xphoto/300x240/140031882.jpg?k=cc6915b3ce7e80b15a873066908fe85b06a415234b37c215f6cf137e6e699260&o=" alt=""></p>
+                            <h4>Jerash</h4>
+                            <p>37 km away</p>
+                        </div>
+                        <div>
+                            <p><img src="https://cf.bstatic.com/xdata/images/xphoto/300x240/140031882.jpg?k=cc6915b3ce7e80b15a873066908fe85b06a415234b37c215f6cf137e6e699260&o=" alt=""></p>
+                            <h4>Jerash</h4>
+                            <p>37 km away</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h1>Stay at our top unique properties</h1>
+                    <p>From castles and villas to boats and igloos, we have it all</p>
+                    <div class="flex_row">
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h1>Trending destinations</h1>
+                    <p>most popular choices for travellers from Jordan</p>
+                    <div class="grid_container">
+                        <div class="Amman">
+                            Amman
+                        </div>
+                        <div class="Aqaba">
+                            Aqaba
+                        </div>
+                        <div class="Istanbul">
+                            Istanbul
+                        </div>
+                        <div class="Soqayma">
+                            Soqayma
+                        </div>
+                        <div class="Dubai">
+                            Dubai
+                        </div>
+                    </div>
+                    <br>
+
+                    <h1>Stay at our top unique properties</h1>
+                    <p>From castles and villas to boats and igloos, we have it all</p>
+                    <div class="flex_row">
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="image" style="background-image: url(https://cf.bstatic.com/xdata/images/hotel/square600/283036728.webp?k=b861d0fdaee2b84a749d57c65c7a112478b33d958bb97ba7b74f06f313b90656&o=);"></div>
+                            <h3>Gyttja Vastergards</h3>
+                            <p>Finland Nauvo</p>
+                            <div class="flex_row flex_auto">
+                                <div class="rating">
+                                    9.3
+                                </div>
+                                <p>wonderfull . 131 reviews</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <footer>
+                <div class="flex_row" style="width: 80%;">
+                    <ul>
+                        <li><p><b>Support</b></p></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    </ul>
+                    <ul>
+                        <li><p><b>Support</b></p></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    </ul>
+                    <ul>
+                        <li><p><b>Support</b></p></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    </ul>
+                    <ul>
+                        <li><p><b>Support</b></p></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    </ul>
+                </div>
+                
+            </footer>
+        </div>
+
+        <script src="https://kit.fontawesome.com/29bcb0d26a.js" crossorigin="anonymous"></script>
+</body>
+</html>
