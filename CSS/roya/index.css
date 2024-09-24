@@ -1,0 +1,16 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+.nav-item a{
+    color: #1F2D63;
+    font-weight: bold;
+}
+
+.up-h{
+    background-color: #F0F0F0;
+    padding: 10px;
+}
